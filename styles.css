@@ -1,0 +1,138 @@
+
+/*  Fondo general */
+body {
+  background: url("imagen/foto5.jpg") no-repeat center center fixed;
+  background-size: cover;
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  text-align: center;
+  color: #fff; 
+}
+
+/*   bienvenida */
+.bienvenida {
+  max-width: 600px;
+  margin: 20px auto;
+  font-size: 16px;
+  color: #000;
+  line-height: 1.6;
+  text-align: center;
+  background-color: #fff8dc;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/*  Logo principal */
+.logo {
+  width: 500px;
+  margin: 50px auto;
+  display: block;
+}
+
+/*  Logo en formulario */
+.logo2 {
+  width: 200px;
+  margin: 50px auto;
+  display: block;
+}
+
+/* Caja del formulario */
+form {
+  background: white;
+  width: 400px;
+  margin: 20px auto;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  text-align: left;
+  color: #000; /* texto del formulario negro */
+}
+
+/* Títulos dentro del formulario */
+h2, h3 {
+  text-align: center;
+  color: #000;
+}
+
+/* Campos de entrada */
+input, select {
+  width: 80%;
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botones */
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 50%;
+  font-size: 16px;
+  display: block;
+  margin: 20px auto;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/*  Mensajes de error */
+.error {
+  color: red !important;  /* fuerza rojo aunque body sea blanco */
+  font-size: 12px;
+  display: block;
+  margin-top: 4px;       /* cambiado de -8px a 4px para evitar superposición */
+  margin-bottom: 10px;
+  text-align: center;
+  min-height: 18px;      /* asegura espacio aunque el mensaje esté vacío */
+}
+
+/*  Galería con cuadrícula */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Caja de cada foto */
+.foto {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: center;
+  padding: 10px;
+}
+
+/* Imagen dentro de la caja */
+.foto img {
+  width: 200px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*  Movimiento al pasar el mouse */
+.foto:hover img {
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+}
+
+/* Texto debajo de cada foto */
+.foto p {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #333;
+}
