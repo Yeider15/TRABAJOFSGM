@@ -69,22 +69,31 @@
   }
 });
 
+let contadorMascotas = 0; //Contador para ID únicos
 // Agregar mascota
 document.getElementById("agregarMascota").addEventListener("click", function() {
   const container = document.getElementById("mascotasContainer");
   const div = document.createElement("div");
   div.classList.add("mascota");
+
+  // crear ID usando contador
+  const idTipo = "tipoMascota" + contadorMascotas;
+  const idNombre = "nombreMascota" + contadorMascotas;
+  
   div.innerHTML = `
-    <label>Tipo:</label>
-    <select class="tipoMascota" required>
+    <label for="${idTipo}">Tipo:</label>
+    <select id="${idTipo}" class="tipoMascota" name="${idTipo}" required>
       <option value="">Seleccione</option>
       <option value="Gato">Gato</option>
       <option value="Perro">Perro</option>
       <option value="Ave">Ave</option>
       <option value="Otro">Otro</option>
     </select>
-    <label>Nombre:</label>
-    <input type="text" class="nombreMascota" maxlength="50" required>
+
+    <label for="${idNombre}">Nombre:</label>
+    <input type="text" id="${idNombre}" name="${idNombre}" class="nombreMascota" maxlength="50" required>
   `;
   container.appendChild(div);
+
+  contadorMascotas++;
 });
