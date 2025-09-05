@@ -64,7 +64,13 @@
   }
 
   if (valido) {
-    alert("Registro exitoso ✅");
+    // alert("Registro exitoso ✅");
+    const formulario = document.getElementById("registro");
+    const formData = new FormData(formulario);
+    const urlParam = new URLSearchParams(formData)
+    const queryString = urlParam.toString();
+    
+    alert(queryString)
     this.reset();
   }
 });
